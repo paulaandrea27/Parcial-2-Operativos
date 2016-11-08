@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?><testsuite errors="0" failures="8" name="pytest" skips="0" tests="8" time="0.179"><testcase classname="test_files" file="test_files.py" line="8" name="test_create_file" time="0.0105009078979"><failure message="AttributeError: &apos;FlaskClient&apos; object has no attribute &apos;create_file&apos;">client = &lt;FlaskClient &lt;Flask &apos;files&apos;&gt;&gt;
+
+    def test_create_file(client):
+&gt;   	result = client.create_file()
+E    AttributeError: &apos;FlaskClient&apos; object has no attribute &apos;create_file&apos;
+
+test_files.py:10: AttributeError</failure></testcase><testcase classname="test_files" file="test_files.py" line="12" name="test_read_files" time="0.000586986541748"><failure message="AttributeError: &apos;FlaskClient&apos; object has no attribute &apos;read_files&apos;">client = &lt;FlaskClient &lt;Flask &apos;files&apos;&gt;&gt;
+
+    def test_read_files(client):
+&gt;   	result = client.read_files()
+E    AttributeError: &apos;FlaskClient&apos; object has no attribute &apos;read_files&apos;
+
+test_files.py:14: AttributeError</failure></testcase><testcase classname="test_files" file="test_files.py" line="16" name="test_update_file" time="0.00053596496582"><failure message="AttributeError: &apos;FlaskClient&apos; object has no attribute &apos;update_file&apos;">client = &lt;FlaskClient &lt;Flask &apos;files&apos;&gt;&gt;
+
+    def test_update_file(client):
+&gt;   	result = client.update_file()
+E    AttributeError: &apos;FlaskClient&apos; object has no attribute &apos;update_file&apos;
+
+test_files.py:18: AttributeError</failure></testcase><testcase classname="test_files" file="test_files.py" line="20" name="test_delete_files" time="0.000532865524292"><failure message="AttributeError: &apos;FlaskClient&apos; object has no attribute &apos;delete_files&apos;">client = &lt;FlaskClient &lt;Flask &apos;files&apos;&gt;&gt;
+
+    def test_delete_files(client):
+&gt;   	result = client.delete_files()
+E    AttributeError: &apos;FlaskClient&apos; object has no attribute &apos;delete_files&apos;
+
+test_files.py:22: AttributeError</failure></testcase><testcase classname="test_recently_created" file="test_recently_created.py" line="8" name="test_post_recently_created" time="0.000427961349487"><failure message="AttributeError: &apos;function&apos; object has no attribute &apos;update_file&apos;">def test_post_recently_created():
+&gt;   	result = client.update_file()
+E    AttributeError: &apos;function&apos; object has no attribute &apos;update_file&apos;
+
+test_recently_created.py:10: AttributeError</failure></testcase><testcase classname="test_recently_created" file="test_recently_created.py" line="12" name="test_get_files" time="0.000335931777954"><failure message="AttributeError: &apos;function&apos; object has no attribute &apos;read_files&apos;">def test_get_files():
+&gt;   	result = client.read_files()
+E    AttributeError: &apos;function&apos; object has no attribute &apos;read_files&apos;
+
+test_recently_created.py:14: AttributeError</failure></testcase><testcase classname="test_recently_created" file="test_recently_created.py" line="16" name="test_put_recently_created" time="0.000340938568115"><failure message="AttributeError: &apos;function&apos; object has no attribute &apos;update_file&apos;">def test_put_recently_created():
+&gt;   	result = client.update_file()
+E    AttributeError: &apos;function&apos; object has no attribute &apos;update_file&apos;
+
+test_recently_created.py:18: AttributeError</failure></testcase><testcase classname="test_recently_created" file="test_recently_created.py" line="20" name="test_delete_recently_created" time="0.000335693359375"><failure message="AttributeError: &apos;function&apos; object has no attribute &apos;update_file&apos;">def test_delete_recently_created():
+&gt;   	result = client.update_file()
+E    AttributeError: &apos;function&apos; object has no attribute &apos;update_file&apos;
+
+test_recently_created.py:22: AttributeError</failure></testcase></testsuite>
