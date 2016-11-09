@@ -5,7 +5,7 @@ import tempfile
 import os
 from files import app
 
-class FlaskTestCase(unittest.TestCase):
+class FlaskTestCase2(unittest.TestCase):
 
 	def test_get_files(self):
 		client = app.test_client(self)
