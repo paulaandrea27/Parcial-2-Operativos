@@ -7,17 +7,17 @@ def client(request):
     return client
 
 def test_create_file(client):
-	result = client.create_file()
-	client.assertEqual(result.status_code,201)
+	result = client.post("/v1.0/files")
+	assertEqual(result.status_code,201)
 
 def test_read_files(client):
-	result = client.read_files()
-	client.assertEqual(result.status_code,200)
+	result = client.get("/v1.0/files")
+	assertEqual(result.status_code,200)
 
 def test_update_file(client):
-	result = client.update_file()
-	client.assertEqual(result.status_code,404)
+	result = client.put("/v1.0/files")
+	assertEqual(result.status_code,404)
 
 def test_delete_files(client):
-	result = client.delete_files()
-	client.assertEqual(result.status_code,200)
+	result = client.delete("/v1.0/files")
+	assertEqual(result.status_code,200)
