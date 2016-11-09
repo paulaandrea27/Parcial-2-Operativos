@@ -1,23 +1,16 @@
 import pytest
-from recently_created import app
+import json
+import unittest
+import tempfile
+import os
+from files import app
 
-@pytest.fixture
-def client(request):
-    client = app.test_client()
-    return client
+class FlaskTestCase(unittest.TestCase):
 
-def test_post_recently_created(client):
-	result = client.post("/v1.0/files/recently_created")
-	assertEqual(result.status_code,404)
+	def test_get_files(self):
+		client = app.test_client(self)
+		result = client.get('/v1.0/files/recently_created')
+		self.assertEqual(result.status_code,200)
 
-def test_get_files(client):
-	result = client.get("/v1.0/files/recently_created")
-	assertEqual(result.status_code,200)
-
-def test_put_recently_created(client):
-	result = client.put("/v1.0/files/recently_created")
-	assertEqual(result.status_code,404)
-
-def test_delete_recently_created(client):
-	result = client.delete("/v1.0/files/recently_created")
-	assertEqual(result.status_code,404)
+if __name__ == '__main__':
+    unittest.main()

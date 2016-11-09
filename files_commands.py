@@ -1,7 +1,7 @@
 from subprocess import Popen, PIPE
 
 def get_all_files():
-  grep_process = Popen(["ls","/home/filesystem_user/git/Parcial-1-Operativos/codigoContratos"], stdout=PIPE, stderr=PIPE)
+  grep_process = Popen(["ls"], stdout=PIPE, stderr=PIPE)
   file_list = Popen(["awk",'{print $1}'], stdin=grep_process.stdout, stdout=PIPE, stderr=PIPE).communicate()[0].split('\n')  
   return filter(None,file_list)
 
