@@ -9,7 +9,7 @@ class FlaskTestCase(unittest.TestCase):
 
 	def test_get_files(self):
 		client = app.test_client(self)
-		result = client.get('/v1.0/files/recently_created')
+		result = client.get('/v1.0/files/recently_created',follow_redirects=True)
 		self.assertEqual(result.status_code,200)
 
 if __name__ == '__main__':
